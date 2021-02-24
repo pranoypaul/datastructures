@@ -30,12 +30,13 @@ class HashTable:
     def display_hash(self): 
       
         for i in range(self.count): 
-            print(i, end = " ") 
-            for j in self.data[i]: 
-                print("-->", end = " ") 
-                print(j, end = " ") 
-                  
-            print() 
+            if(self.data[i]):
+                print(i, end = " ") 
+                for j in self.data[i]: 
+                    print("-->", end = " ") 
+                    print(j, end = " ") 
+                      
+                print() 
         
     """Getting values from the has table"""
     def get(self,keyvalue):
@@ -68,10 +69,12 @@ myHashTable.insert( 20, 'Mathura')
 myHashTable.insert(9, 'Delhi') 
 myHashTable.insert(21, 'Punjab') 
 myHashTable.insert(31, 'Noida') 
-myHashTable.insert('str1', 'Noida') 
+myHashTable.insert('str1', 'Chennai') 
+
 
   
 myHashTable.display_hash () 
 
 print(myHashTable.get(21))
 print(myHashTable.get('str1'))
+print(myHashTable.keys())
